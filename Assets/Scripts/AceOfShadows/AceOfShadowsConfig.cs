@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.Scripts.App.AceOfShadows
+namespace Assets.Scripts.AceOfShadows
 {
     [CreateAssetMenu(fileName = "AceOfShadowsConfig", menuName = "Configs/AceOfShadowsConfig", order = 0)]
     public class AceOfShadowsConfig : ScriptableObject

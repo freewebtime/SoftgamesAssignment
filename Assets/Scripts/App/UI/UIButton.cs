@@ -22,7 +22,7 @@ namespace Assets.Scripts.App.UI
         }
 
         [UxmlAttribute("onClick")]
-        private string _onClickPath;
+        private string _onClickPath = "OnClick";
 
         [CreateProperty]
         public string OnClickPath

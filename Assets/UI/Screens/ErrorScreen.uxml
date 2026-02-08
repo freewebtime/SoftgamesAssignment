@@ -1,24 +1,19 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/General.uss?fileID=7433441132597879392&amp;guid=bb3a906a0df3d644c96e7808e7f56cfb&amp;type=3#General" />
-    <ui:VisualElement name="root" data-source-type="Assets.Scripts.AceOfShadows.GameOverViewData, Assembly-CSharp" class="full-screen center-content splash-screen">
+    <ui:VisualElement name="root" data-source-type="Assets.Scripts.App.UI.ErrorViewData, Assembly-CSharp" class="full-screen center-content splash-screen" style="flex-grow: 1;">
         <ui:VisualElement name="content" class="background-light">
             <ui:Label name="title" text="Title">
                 <Bindings>
                     <ui:DataBinding property="text" data-source-path="Title" binding-mode="ToTarget" />
                 </Bindings>
             </ui:Label>
-            <ui:Label name="message" text="Message">
+            <ui:Label text="Description" name="message">
                 <Bindings>
                     <ui:DataBinding property="text" data-source-path="Message" binding-mode="ToTarget" />
                 </Bindings>
             </ui:Label>
-            <ui:VisualElement name="buttons-list" data-source-path="Buttons" style="flex-direction: row;">
-                <Assets.Scripts.App.UI.UIButton name="button-restart" data-source-path="[0]" text="Button" onClick="OnClick">
-                    <Bindings>
-                        <ui:DataBinding property="text" data-source-path="Text" binding-mode="ToTarget" />
-                    </Bindings>
-                </Assets.Scripts.App.UI.UIButton>
-                <Assets.Scripts.App.UI.UIButton name="button-quit" data-source-path="[1]" text="Button" onClick="OnClick">
+            <ui:VisualElement name="buttons-area" style="flex-grow: 1;">
+                <Assets.Scripts.App.UI.UIButton name="close-button" data-source-path="CloseButton" text="Close">
                     <Bindings>
                         <ui:DataBinding property="text" data-source-path="Text" binding-mode="ToTarget" />
                     </Bindings>

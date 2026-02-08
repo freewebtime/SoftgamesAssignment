@@ -1,0 +1,23 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="dialog-line-view" data-source-type="Assets.Scripts.MagicWords.DialogueLineViewData, Assembly-CSharp" class="dialog-line" style="flex-direction: row;">
+        <ui:VisualElement name="avatar-area" class="avatar-area" style="background-image: url(&quot;project://database/Assets/Art/Images/no-avatar.png?fileID=2800000&amp;guid=2af622cae945e784887ef8f4b6b46a0b&amp;type=3#no-avatar&quot;);">
+            <Bindings>
+                <ui:DataBinding property="style.backgroundImage" data-source-path="Avatar.Texture" binding-mode="ToTarget" />
+            </Bindings>
+        </ui:VisualElement>
+        <ui:VisualElement name="text-bubble-area" class="text-bubble background-dark" style="flex-grow: 1; border-bottom-left-radius: 0;">
+            <ui:Label text="Text" name="dialogue-text-label" class="light-text" style="white-space: normal;">
+                <Bindings>
+                    <ui:DataBinding property="text" data-source-path="Text" binding-mode="ToTarget" />
+                </Bindings>
+            </ui:Label>
+            <Bindings>
+                <ui:DataBinding property="style.borderBottomRightRadius" data-source-path="BorderRadiusRight" binding-mode="ToTarget" />
+                <ui:DataBinding property="style.borderBottomLeftRadius" data-source-path="BorderRadiusLeft" binding-mode="ToTarget" />
+            </Bindings>
+        </ui:VisualElement>
+        <Bindings>
+            <ui:DataBinding property="style.flexDirection" data-source-path="FlexDirection" binding-mode="ToTarget" />
+        </Bindings>
+    </ui:VisualElement>
+</ui:UXML>

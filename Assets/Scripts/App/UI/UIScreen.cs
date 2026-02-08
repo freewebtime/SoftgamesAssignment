@@ -70,7 +70,7 @@ namespace Assets.Scripts.App.UI
         public TViewData ViewData
         {
             get => _viewData;
-            private set
+            set
             {
                 if (Equals(value, ViewData))
                 {

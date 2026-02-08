@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.Scripts.App.AceOfShadows
+namespace Assets.Scripts.AceOfShadows
 {
     public class CardStack : MonoBehaviour
     {

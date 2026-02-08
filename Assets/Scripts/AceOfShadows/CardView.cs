@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Assets.Scripts.App.AceOfShadows
+namespace Assets.Scripts.AceOfShadows
 {
     public class CardView : MonoBehaviour
     {

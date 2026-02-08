@@ -1,8 +1,9 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.App;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.Scripts.App.AceOfShadows
+namespace Assets.Scripts.AceOfShadows
 {
     public class DeckController : MonoBehaviour
     {

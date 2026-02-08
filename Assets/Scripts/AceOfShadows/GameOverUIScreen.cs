@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using Unity.Properties;
 using UnityEngine;
 
-namespace Assets.Scripts.App.AceOfShadows
+namespace Assets.Scripts.AceOfShadows
 {
     public class GameOverUIScreen : UIScreen<GameOverViewData>
     {
