@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &6016021876126702536
+--- !u!1001 &1619509356893139316
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1888154958527994783, guid: 123247b68c475a5478b549898eb26897, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 21.14224
       objectReference: {fileID: 0}
     - target: {fileID: 1888154958527994783, guid: 123247b68c475a5478b549898eb26897, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -11.36019
       objectReference: {fileID: 0}
     - target: {fileID: 1888154958527994783, guid: 123247b68c475a5478b549898eb26897, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -176.07707
       objectReference: {fileID: 0}
     - target: {fileID: 1888154958527994783, guid: 123247b68c475a5478b549898eb26897, type: 3}
       propertyPath: m_LocalRotation.w
@@ -50,97 +50,54 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9050410773787495086, guid: 123247b68c475a5478b549898eb26897, type: 3}
       propertyPath: m_Name
-      value: UIScreen MainMenu
+      value: UIScreen FPS Counter
       objectReference: {fileID: 0}
     - target: {fileID: 9149346767745583779, guid: 123247b68c475a5478b549898eb26897, type: 3}
       propertyPath: sourceAsset
       value: 
-      objectReference: {fileID: 9197481963319205126, guid: 398e776a489606545a4d3294f4457091, type: 3}
+      objectReference: {fileID: 9197481963319205126, guid: 43932029f737dc442a7365053f07dd0d, type: 3}
+    - target: {fileID: 9149346767745583779, guid: 123247b68c475a5478b549898eb26897, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 9050410773787495086, guid: 123247b68c475a5478b549898eb26897, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1509243172996500006}
+      addedObject: {fileID: 5620255507717713959}
   m_SourcePrefab: {fileID: 100100000, guid: 123247b68c475a5478b549898eb26897, type: 3}
---- !u!114 &3279806271852302699 stripped
+--- !u!114 &7530200292907908055 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9149346767745583779, guid: 123247b68c475a5478b549898eb26897, type: 3}
-  m_PrefabInstance: {fileID: 6016021876126702536}
+  m_PrefabInstance: {fileID: 1619509356893139316}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3379019823512686950}
+  m_GameObject: {fileID: 7773252024718703578}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
---- !u!1 &3379019823512686950 stripped
+--- !u!1 &7773252024718703578 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9050410773787495086, guid: 123247b68c475a5478b549898eb26897, type: 3}
-  m_PrefabInstance: {fileID: 6016021876126702536}
+  m_PrefabInstance: {fileID: 1619509356893139316}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1509243172996500006
+--- !u!114 &5620255507717713959
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3379019823512686950}
+  m_GameObject: {fileID: 7773252024718703578}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e757aacffa156f4c96be81571b95c06, type: 3}
+  m_Script: {fileID: 11500000, guid: b99a311e376c14c429b0f794d82d4fc8, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.App.UI.MainMenuUIScreen
-  UIDocument: {fileID: 3279806271852302699}
+  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.App.UI.FpsCounterUIScreen
+  UIDocument: {fileID: 7530200292907908055}
   _viewData:
-    _title: Main Menu
-    MenuButtons:
-    - _text: Ace of Shadows
-      _onClick:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 1509243172996500006}
-            m_TargetAssemblyTypeName: Assets.Scripts.App.UI.MainMenuUIScreen, Assembly-CSharp
-            m_MethodName: LoadScene
-            m_Mode: 5
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: AceOfShadows
-              m_BoolArgument: 0
-            m_CallState: 2
-    - _text: Magic Words
-      _onClick:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 1509243172996500006}
-            m_TargetAssemblyTypeName: Assets.Scripts.App.UI.MainMenuUIScreen, Assembly-CSharp
-            m_MethodName: LoadScene
-            m_Mode: 5
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: MagicWords
-              m_BoolArgument: 0
-            m_CallState: 2
-    - _text: Phoenix Flame
-      _onClick:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 1509243172996500006}
-            m_TargetAssemblyTypeName: Assets.Scripts.App.UI.MainMenuUIScreen, Assembly-CSharp
-            m_MethodName: LoadScene
-            m_Mode: 5
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: PhoenixFlame
-              m_BoolArgument: 0
-            m_CallState: 2
+    _text: 'FPS: 0.00'
+  _fps: 0
+  FramesToMeasure: 60

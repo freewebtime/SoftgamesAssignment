@@ -15,10 +15,26 @@ VisualElement {
     align-items: center;
 }
 
+.splash-screen {
+    background-color: rgba(51, 51, 51, 0.7);
+}
+
 .background-dark {
     background-color: rgb(51, 51, 51);
 }
 
 .background-light {
     background-color: rgb(102, 102, 102);
+}
+
+.top-left-content {
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-end;
+}
+
+.top-right-content {
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
 }

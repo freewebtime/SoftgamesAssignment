@@ -1,0 +1,41 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/General.uss?fileID=7433441132597879392&amp;guid=bb3a906a0df3d644c96e7808e7f56cfb&amp;type=3#General" />
+    <ui:VisualElement name="root" data-source-type="Assets.Scripts.App.UI.TaskSceneViewData, Assembly-CSharp" class="full-screen center-content" style="flex-grow: 1;">
+        <ui:VisualElement name="toggle-menu-root" picking-mode="Ignore" class="full-screen top-left-content" style="flex-grow: 1;">
+            <Assets.Scripts.App.UI.UIButton name="toggle-menu-button" data-source-path="ToggleMenuButton" text="Menu" onClick="OnClick">
+                <Bindings>
+                    <ui:DataBinding property="text" data-source-path="Text" binding-mode="ToTarget" />
+                </Bindings>
+            </Assets.Scripts.App.UI.UIButton>
+        </ui:VisualElement>
+        <ui:VisualElement name="menu-splashscreen" class="full-screen center-content splash-screen">
+            <ui:VisualElement name="menu-root" class="background-light">
+                <ui:Label text="Label" name="title">
+                    <Bindings>
+                        <ui:DataBinding property="text" data-source-path="Title" binding-mode="ToTarget" />
+                    </Bindings>
+                </ui:Label>
+                <ui:VisualElement name="buttons-list" data-source-path="MenuButtons">
+                    <Assets.Scripts.App.UI.UIButton name="button-task-1" data-source-path="[0]" text="Button" onClick="OnClick">
+                        <Bindings>
+                            <ui:DataBinding property="text" data-source-path="Text" binding-mode="ToTarget" />
+                        </Bindings>
+                    </Assets.Scripts.App.UI.UIButton>
+                    <Assets.Scripts.App.UI.UIButton name="button-task-2" data-source-path="[1]" text="Button" onClick="OnClick">
+                        <Bindings>
+                            <ui:DataBinding property="text" data-source-path="Text" binding-mode="ToTarget" />
+                        </Bindings>
+                    </Assets.Scripts.App.UI.UIButton>
+                    <Assets.Scripts.App.UI.UIButton name="button-task-3" data-source-path="[2]" text="Button" onClick="OnClick">
+                        <Bindings>
+                            <ui:DataBinding property="text" data-source-path="Text" binding-mode="ToTarget" />
+                        </Bindings>
+                    </Assets.Scripts.App.UI.UIButton>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <Bindings>
+                <ui:DataBinding property="style.display" data-source-path="MenuDisplayStyle" binding-mode="ToTarget" />
+            </Bindings>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

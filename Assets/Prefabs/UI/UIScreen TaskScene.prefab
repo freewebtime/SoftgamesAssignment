@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &6016021876126702536
+--- !u!1001 &2893463721564288633
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -26,15 +26,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1888154958527994783, guid: 123247b68c475a5478b549898eb26897, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1888154958527994783, guid: 123247b68c475a5478b549898eb26897, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1888154958527994783, guid: 123247b68c475a5478b549898eb26897, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1888154958527994783, guid: 123247b68c475a5478b549898eb26897, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -50,97 +50,115 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9050410773787495086, guid: 123247b68c475a5478b549898eb26897, type: 3}
       propertyPath: m_Name
-      value: UIScreen MainMenu
+      value: UIScreen TaskScene
       objectReference: {fileID: 0}
     - target: {fileID: 9149346767745583779, guid: 123247b68c475a5478b549898eb26897, type: 3}
       propertyPath: sourceAsset
       value: 
-      objectReference: {fileID: 9197481963319205126, guid: 398e776a489606545a4d3294f4457091, type: 3}
+      objectReference: {fileID: 9197481963319205126, guid: cbd1c16c2b8cadf4e9bc9ed8124756dd, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 9050410773787495086, guid: 123247b68c475a5478b549898eb26897, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1509243172996500006}
+      addedObject: {fileID: 9121383730865888529}
   m_SourcePrefab: {fileID: 100100000, guid: 123247b68c475a5478b549898eb26897, type: 3}
---- !u!114 &3279806271852302699 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9149346767745583779, guid: 123247b68c475a5478b549898eb26897, type: 3}
-  m_PrefabInstance: {fileID: 6016021876126702536}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3379019823512686950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
---- !u!1 &3379019823512686950 stripped
+--- !u!1 &6178412337904057559 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9050410773787495086, guid: 123247b68c475a5478b549898eb26897, type: 3}
-  m_PrefabInstance: {fileID: 6016021876126702536}
+  m_PrefabInstance: {fileID: 2893463721564288633}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1509243172996500006
+--- !u!114 &9121383730865888529
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3379019823512686950}
+  m_GameObject: {fileID: 6178412337904057559}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e757aacffa156f4c96be81571b95c06, type: 3}
+  m_Script: {fileID: 11500000, guid: 115adbad467e4a344896de311618f3d1, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.App.UI.MainMenuUIScreen
-  UIDocument: {fileID: 3279806271852302699}
+  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.App.UI.TaskSceneUIScreen
+  UIDocument: {fileID: 6259624719013231834}
   _viewData:
-    _title: Main Menu
-    MenuButtons:
-    - _text: Ace of Shadows
+    _menuTitle: Task Menu
+    _toggleMenuButton:
+      _text: Menu
       _onClick:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 1509243172996500006}
-            m_TargetAssemblyTypeName: Assets.Scripts.App.UI.MainMenuUIScreen, Assembly-CSharp
-            m_MethodName: LoadScene
-            m_Mode: 5
+          - m_Target: {fileID: 9121383730865888529}
+            m_TargetAssemblyTypeName: Assets.Scripts.App.UI.TaskSceneUIScreen, Assembly-CSharp
+            m_MethodName: ToggleMenu
+            m_Mode: 1
             m_Arguments:
               m_ObjectArgument: {fileID: 0}
               m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
               m_IntArgument: 0
               m_FloatArgument: 0
-              m_StringArgument: AceOfShadows
+              m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
-    - _text: Magic Words
+    _menuButtons:
+    - _text: Resume
       _onClick:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 1509243172996500006}
-            m_TargetAssemblyTypeName: Assets.Scripts.App.UI.MainMenuUIScreen, Assembly-CSharp
-            m_MethodName: LoadScene
-            m_Mode: 5
+          - m_Target: {fileID: 9121383730865888529}
+            m_TargetAssemblyTypeName: Assets.Scripts.App.UI.TaskSceneUIScreen, Assembly-CSharp
+            m_MethodName: Resume
+            m_Mode: 1
             m_Arguments:
               m_ObjectArgument: {fileID: 0}
               m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
               m_IntArgument: 0
               m_FloatArgument: 0
-              m_StringArgument: MagicWords
+              m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
-    - _text: Phoenix Flame
+    - _text: Restart
       _onClick:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 1509243172996500006}
-            m_TargetAssemblyTypeName: Assets.Scripts.App.UI.MainMenuUIScreen, Assembly-CSharp
-            m_MethodName: LoadScene
-            m_Mode: 5
+          - m_Target: {fileID: 9121383730865888529}
+            m_TargetAssemblyTypeName: Assets.Scripts.App.UI.TaskSceneUIScreen, Assembly-CSharp
+            m_MethodName: RestartScene
+            m_Mode: 1
             m_Arguments:
               m_ObjectArgument: {fileID: 0}
               m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
               m_IntArgument: 0
               m_FloatArgument: 0
-              m_StringArgument: PhoenixFlame
+              m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
+    - _text: Main Menu
+      _onClick:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 9121383730865888529}
+            m_TargetAssemblyTypeName: Assets.Scripts.App.UI.TaskSceneUIScreen, Assembly-CSharp
+            m_MethodName: ReturnToMainMenu
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+    _menuDisplayStyle: 1
+--- !u!114 &6259624719013231834 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9149346767745583779, guid: 123247b68c475a5478b549898eb26897, type: 3}
+  m_PrefabInstance: {fileID: 2893463721564288633}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6178412337904057559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts.App.Bootstrap
@@ -12,6 +13,15 @@ namespace Assets.Scripts.App.Bootstrap
         public static void Load(string sceneName)
         {
             SceneManager.LoadScene(sceneName);
+        }
+
+        public static void RestartScene()
+        {
+            var activeScene = SceneManager.GetActiveScene();
+            if (activeScene != null)
+            {
+                SceneManager.LoadScene(activeScene.name);
+            }
         }
     }
 }

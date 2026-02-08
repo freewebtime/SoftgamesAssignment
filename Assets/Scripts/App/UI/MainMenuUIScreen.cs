@@ -23,7 +23,7 @@ namespace Assets.Scripts.App.UI
     public class MainMenuViewData : ViewData
     {
         [SerializeField]
-        private string _title;
+        private string _title = "Main Menu";
 
         [CreateProperty]
         public string Title
