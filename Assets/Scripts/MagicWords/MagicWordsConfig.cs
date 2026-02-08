@@ -9,6 +9,10 @@ namespace Assets.Scripts.MagicWords
     {
         public string EndpointUrl;
 
+        public bool IsSimulateSlowInternetConnection;
+
+        public float SlowInternetConnectionDelay;
+
         public List<EmojiReplaceConfig> EmojiReplaceConfigs;
     }
 

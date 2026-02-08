@@ -658,6 +658,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIScreen Conversation
       objectReference: {fileID: 0}
+    - target: {fileID: 3379019823512686950, guid: efd1da4e36f0bc54e9e6286ad6954a3f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5132659000984757700, guid: efd1da4e36f0bc54e9e6286ad6954a3f, type: 3}
       propertyPath: _viewData._texts.Array.size
       value: 3

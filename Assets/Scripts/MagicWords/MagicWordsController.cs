@@ -36,6 +36,11 @@ namespace Assets.Scripts.MagicWords
 
             yield return null;
 
+            if (GetIsSimulateSlowInternetConnection())
+            {
+                yield return new WaitForSeconds(GetSlowInternetConnectionDelay());
+            }
+
             while (!webRequest.isDone)
             {
                 if (loadingViewData != null)
@@ -103,7 +108,10 @@ namespace Assets.Scripts.MagicWords
             foreach (var avatarEntry in viewData.Avatars)
             {
                 // uncomment this if you want to simulate slow internet connection
-                yield return new WaitForSeconds(1f);
+                if (GetIsSimulateSlowInternetConnection())
+                {
+                    yield return new WaitForSeconds(GetSlowInternetConnectionDelay());
+                }
 
                 var avatar = avatarEntry.Value;
                 if (avatar == null || string.IsNullOrEmpty(avatar.Url) || avatar.Texture != null)
@@ -128,6 +136,26 @@ namespace Assets.Scripts.MagicWords
                     //ShowErrorScreen("Error", $"Failed to load avatar texture from url {avatar.Url}:\r\n{webRequest.error}");
                 }
             }
+        }
+
+        private bool GetIsSimulateSlowInternetConnection()
+        {
+            if (_config == null)
+            {
+                return false;
+            }
+
+            return _config.IsSimulateSlowInternetConnection;
+        }
+
+        private float GetSlowInternetConnectionDelay()
+        {
+            if (_config == null)
+            {
+                return 0;
+            }
+
+            return _config.SlowInternetConnectionDelay;
         }
 
         private LoadingViewData ShowLoadingScreen(string title, string description, float progress)
