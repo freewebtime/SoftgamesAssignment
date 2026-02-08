@@ -204,6 +204,124 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81d11b940a3c942429ba6842b0a24953, type: 3}
+--- !u!114 &359118021 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5357530854771026792, guid: 81d11b940a3c942429ba6842b0a24953, type: 3}
+  m_PrefabInstance: {fileID: 359118020}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8640ed28a88cf8448fe2a1c38bd91a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.PhoenixFlame.PhoenixFlameParticles
+--- !u!1001 &464206997
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3379019823512686950, guid: 49e39fdcef84b60498aad8fd861593af, type: 3}
+      propertyPath: m_Name
+      value: UIScreen PhoenixFlame
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628719610116676036, guid: 49e39fdcef84b60498aad8fd861593af, type: 3}
+      propertyPath: _viewData._nextColorButton._onClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628719610116676036, guid: 49e39fdcef84b60498aad8fd861593af, type: 3}
+      propertyPath: _viewData._nextColorButton._onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628719610116676036, guid: 49e39fdcef84b60498aad8fd861593af, type: 3}
+      propertyPath: _viewData._nextColorButton._onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1251623277}
+    - target: {fileID: 4628719610116676036, guid: 49e39fdcef84b60498aad8fd861593af, type: 3}
+      propertyPath: _viewData._nextColorButton._onClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628719610116676036, guid: 49e39fdcef84b60498aad8fd861593af, type: 3}
+      propertyPath: _viewData._nextColorButton._onClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628719610116676036, guid: 49e39fdcef84b60498aad8fd861593af, type: 3}
+      propertyPath: _viewData._nextColorButton._onClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Assets.Scripts.PhoenixFlame.PhoenixFlameController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628719610116676036, guid: 49e39fdcef84b60498aad8fd861593af, type: 3}
+      propertyPath: _viewData._nextColorButton._onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280794832727883863, guid: 49e39fdcef84b60498aad8fd861593af, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.09956
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280794832727883863, guid: 49e39fdcef84b60498aad8fd861593af, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.68693
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280794832727883863, guid: 49e39fdcef84b60498aad8fd861593af, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280794832727883863, guid: 49e39fdcef84b60498aad8fd861593af, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280794832727883863, guid: 49e39fdcef84b60498aad8fd861593af, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280794832727883863, guid: 49e39fdcef84b60498aad8fd861593af, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280794832727883863, guid: 49e39fdcef84b60498aad8fd861593af, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280794832727883863, guid: 49e39fdcef84b60498aad8fd861593af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280794832727883863, guid: 49e39fdcef84b60498aad8fd861593af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280794832727883863, guid: 49e39fdcef84b60498aad8fd861593af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 49e39fdcef84b60498aad8fd861593af, type: 3}
+--- !u!114 &773251835 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4628719610116676036, guid: 49e39fdcef84b60498aad8fd861593af, type: 3}
+  m_PrefabInstance: {fileID: 464206997}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 821a570de3f74b54696e60878ac4208b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.PhoenixFlame.PhoenixFlameUIScreen
+--- !u!114 &1251623277 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4380706198710487006, guid: 1d0b9ec2a0c2e9042814bd500b91fcb6, type: 3}
+  m_PrefabInstance: {fileID: 373333829161556252}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ec1e4630e1a5c446b5021bc051b3542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.PhoenixFlame.PhoenixFlameController
 --- !u!1 &1420115895
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,7 +513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6178412337904057559, guid: 022a1607bd7f99b4c927f3c83e121c7f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9121383730865888529, guid: 022a1607bd7f99b4c927f3c83e121c7f, type: 3}
       propertyPath: _viewData._menuTitle
@@ -533,6 +651,75 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1001 &373333829161556252
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 914443567905859804, guid: 1d0b9ec2a0c2e9042814bd500b91fcb6, type: 3}
+      propertyPath: m_Name
+      value: PhoenixFlame Controller
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380706198710487006, guid: 1d0b9ec2a0c2e9042814bd500b91fcb6, type: 3}
+      propertyPath: _config
+      value: 
+      objectReference: {fileID: 11400000, guid: f388ae4b19a0d174fb67a877301ae644, type: 2}
+    - target: {fileID: 4380706198710487006, guid: 1d0b9ec2a0c2e9042814bd500b91fcb6, type: 3}
+      propertyPath: _uiScreen
+      value: 
+      objectReference: {fileID: 773251835}
+    - target: {fileID: 4380706198710487006, guid: 1d0b9ec2a0c2e9042814bd500b91fcb6, type: 3}
+      propertyPath: _flameParticles
+      value: 
+      objectReference: {fileID: 359118021}
+    - target: {fileID: 8627734406812778025, guid: 1d0b9ec2a0c2e9042814bd500b91fcb6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627734406812778025, guid: 1d0b9ec2a0c2e9042814bd500b91fcb6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627734406812778025, guid: 1d0b9ec2a0c2e9042814bd500b91fcb6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627734406812778025, guid: 1d0b9ec2a0c2e9042814bd500b91fcb6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627734406812778025, guid: 1d0b9ec2a0c2e9042814bd500b91fcb6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627734406812778025, guid: 1d0b9ec2a0c2e9042814bd500b91fcb6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627734406812778025, guid: 1d0b9ec2a0c2e9042814bd500b91fcb6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627734406812778025, guid: 1d0b9ec2a0c2e9042814bd500b91fcb6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627734406812778025, guid: 1d0b9ec2a0c2e9042814bd500b91fcb6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627734406812778025, guid: 1d0b9ec2a0c2e9042814bd500b91fcb6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1d0b9ec2a0c2e9042814bd500b91fcb6, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -540,4 +727,6 @@ SceneRoots:
   - {fileID: 1420115898}
   - {fileID: 1921057823}
   - {fileID: 1845479272}
+  - {fileID: 464206997}
+  - {fileID: 373333829161556252}
   - {fileID: 359118020}
