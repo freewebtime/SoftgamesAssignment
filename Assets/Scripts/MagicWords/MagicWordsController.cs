@@ -78,7 +78,7 @@ namespace Assets.Scripts.MagicWords
                 viewData = ConversationScreen.ViewData ?? new ConversationViewData();
 
                 // show dialog
-                viewData.FillData(conversationDTO, _config.EmojiReplaceDictionary);
+                viewData.FillData(conversationDTO, _config.EmojiReplaceConfigs);
             }
             catch (Exception ex)
             {

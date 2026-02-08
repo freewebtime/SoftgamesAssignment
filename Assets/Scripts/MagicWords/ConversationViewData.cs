@@ -36,7 +36,7 @@ namespace Assets.Scripts.MagicWords
 
         public Dictionary<string, AvatarViewData> Avatars;
 
-        public void FillData(ConversationDTO conversationDTO, Dictionary<string, string> emojiReplaceDictionary)
+        public void FillData(ConversationDTO conversationDTO, IList<EmojiReplaceConfig> emojiReplaceConfigs)
         {
             if (conversationDTO == null)
             {
@@ -84,11 +84,11 @@ namespace Assets.Scripts.MagicWords
                     Avatars.TryGetValue(dialogueLineDTO.name, out var avatarViewData);
 
                     var dialogueText = dialogueLineDTO.text;
-                    if (emojiReplaceDictionary != null)
+                    if (emojiReplaceConfigs != null)
                     {
-                        foreach (var kvp in emojiReplaceDictionary)
+                        foreach (var kvp in emojiReplaceConfigs)
                         {
-                            dialogueText = dialogueText.Replace(kvp.Key, kvp.Value);
+                            dialogueText = dialogueText.Replace(kvp.Pattern, kvp.Emoji);
                         }
                     }
 
