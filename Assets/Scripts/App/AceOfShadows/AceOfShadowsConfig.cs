@@ -1,0 +1,102 @@
+﻿using System.Collections.Generic;
+using UnityEngine;
+
+namespace Assets.Scripts.App.AceOfShadows
+{
+    [CreateAssetMenu(fileName = "AceOfShadowsConfig", menuName = "Configs/AceOfShadowsConfig", order = 0)]
+    public class AceOfShadowsConfig : ScriptableObject
+    {
+        [Header("Card Settings")]
+        
+        public int CardsCount = 144;
+        public List<Sprite> CardSprites;
+        public List<Color> SpriteColors;
+        public CardView CardPrefab;
+
+        
+        [Header("Viewport Settings")]
+        
+        public Vector2 CardSize = new Vector2(1.28f, 1.96f);
+        public Vector3 CardOffset = new Vector3(0.1f, 0, 0.01f);
+        public float PixelsPerUnit = 100f;
+        public float ViewportPadding = 0.5f;
+
+        public float DistanceBetweenStacks = 3f;
+        
+        public float CardMoveTime = 1f;
+        
+
+        [Header("Color Generation Settings")]
+
+        [SerializeField]
+        private float _colorStep = 1f / 11f;
+
+        [SerializeField]
+        private float _minColorSaturation = 1f;
+
+        [SerializeField]
+        private float _maxColorSaturation = 0.5f;
+
+        [SerializeField]
+        private float _minColorValue = 1f;
+
+        [SerializeField]
+        private float _maxColorValue = 0.5f;
+
+        public Rect CalcGameplayArea()
+        {
+            var size = new Vector2
+            {
+                x = (CardsCount - 1) * CardOffset.x + CardSize.x,
+                y = DistanceBetweenStacks + CardSize.y
+            };
+            var position = new Vector2
+            {
+                x = -CardSize.x/2f,
+                y = -(DistanceBetweenStacks + CardSize.y)/2f
+            };
+        
+            return new Rect(position, size);
+        }
+
+        public Color GetCardColor(int cardIndex)
+        {
+            if (SpriteColors != null && SpriteColors.Count > 0)
+            {
+                return SpriteColors[cardIndex % SpriteColors.Count];
+            }
+
+            return Color.white;
+        }
+
+        public Sprite GetCardSprite(int cardIndex)
+        {
+            if (CardSprites != null && CardSprites.Count > 0)
+            {
+                return CardSprites[cardIndex % CardSprites.Count];
+            }
+
+            return null;
+        }
+
+        [ContextMenu("Fill Sprite Colors")]
+        private void FillSpriteColors()
+        {
+            SpriteColors ??= new List<Color>();
+            SpriteColors.Clear();
+
+            var circleCount = Mathf.CeilToInt(CardsCount / _colorStep);
+            var circleStep = 1f / circleCount;
+
+            for (int cardIndex = 0; cardIndex < CardsCount; cardIndex++)
+            {
+                var hue = (cardIndex * _colorStep) % 1f;
+                var circleIndex = cardIndex / _colorStep;
+                var saturation = Mathf.Lerp(_minColorSaturation, _maxColorSaturation, circleIndex * circleStep);
+                var colorValue = Mathf.Lerp(_minColorValue, _maxColorValue, circleIndex * circleStep);
+
+                SpriteColors.Add(Color.HSVToRGB(hue, saturation, colorValue));
+            }
+        }
+    }
+}

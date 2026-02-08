@@ -5,6 +5,16 @@ namespace Assets.Scripts.App.UI
 {
     public abstract class UIScreen : MonoBehaviour
     {
+        public virtual void Show()
+        {
+            gameObject.SetActive(true);
+        }
+
+        public virtual void Hide()
+        {
+            gameObject.SetActive(false);
+        }
+
         /// <summary>
         /// The UIDocument that renders a UI of this screen using UIToolkit
         /// </summary>

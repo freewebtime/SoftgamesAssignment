@@ -1,0 +1,10 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/General.uss?fileID=7433441132597879392&amp;guid=bb3a906a0df3d644c96e7808e7f56cfb&amp;type=3#General" />
+    <ui:VisualElement name="root" data-source-type="Assets.Scripts.App.AceOfShadows.CardsCounterViewData, Assembly-CSharp" style="align-items: flex-start; align-self: flex-start;">
+        <ui:Label text="Label" name="Counter">
+            <Bindings>
+                <ui:DataBinding property="text" data-source-path="CardsCount" binding-mode="ToTarget" />
+            </Bindings>
+        </ui:Label>
+    </ui:VisualElement>
+</ui:UXML>
