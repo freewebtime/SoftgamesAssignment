@@ -21,24 +21,63 @@ namespace Assets.Scripts.AceOfShadows
     }
 
     [Serializable]
-    public class GameOverViewData
+    public class GameOverViewData: ViewData
     {
         [SerializeField]
         private string _title;
 
         [CreateProperty]
-        public string Title { get => _title; set => _title = value; }
+        public string Title 
+        { 
+            get => _title; 
+            set
+            {
+                if (Equals(_title, value))
+                {
+                    return;
+                }
+
+                _title = value;
+                CommitChanges();
+            } 
+        }
 
         [SerializeField]
         private string _message;
 
         [CreateProperty]
-        public string Message { get => _message; set => _message = value; }
+        public string Message 
+        { 
+            get => _message; 
+            set
+            {
+                if (Equals(_message, value))
+                {
+                    return;
+                }
+                
+                _message = value;
+                CommitChanges();
+            }
+        }
 
         [SerializeField]
         private List<UIButtonViewData> _buttons;
 
         [CreateProperty]
-        public List<UIButtonViewData> Buttons { get => _buttons; set => _buttons = value; }
+        public List<UIButtonViewData> Buttons 
+        { 
+            get => _buttons; 
+            set
+            {
+                if (Equals(_buttons, value))
+                {
+                    return;
+                }
+
+                _buttons = value;
+                CommitChanges();
+            } 
+        }
     }
 }

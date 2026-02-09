@@ -35,8 +35,3 @@ MonoBehaviour:
   DistanceBetweenStacks: 6
   CardMoveTime: 1
   PauseAfterGameOverDuration: 0.5
-  _colorStep: 0.11111111
-  _minColorSaturation: 0.7
-  _maxColorSaturation: 0.5
-  _minColorValue: 0.7
-  _maxColorValue: 0.5
