@@ -18,14 +18,14 @@ MonoBehaviour:
   DefaultAvatarIcon: {fileID: 2800000, guid: 2af622cae945e784887ef8f4b6b46a0b, type: 3}
   EmojiReplaceConfigs:
   - Pattern: '{satisfied}'
-    Emoji: "<size=\"24\">\U0001F60A</size>"
+    Emoji: <sprite name="satisfied">
   - Pattern: '{intrigued}'
-    Emoji: "<size=\"24\">\U0001F914</size>"
+    Emoji: <sprite name="intrigued">
   - Pattern: '{neutral}'
-    Emoji: "<size=\"24\">\U0001F610</size>"
+    Emoji: <sprite name="neutral">
   - Pattern: '{affirmative}'
-    Emoji: "<size=\"24\">\u2705</size>"
+    Emoji: <sprite name="check">
   - Pattern: '{laughing}'
-    Emoji: "<size=\"24\">\U0001F601</size>"
+    Emoji: <sprite name="laugh">
   - Pattern: '{win}'
-    Emoji: "<size=\"24\">\U0001F947</size>"
+    Emoji: <sprite name="win">
