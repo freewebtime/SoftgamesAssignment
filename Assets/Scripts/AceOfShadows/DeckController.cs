@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.App;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -38,8 +39,11 @@ namespace Assets.Scripts.AceOfShadows
         [SerializeField]
         private GameOverUIScreen _gameOverScreen;
 
+        private Vector2 _cachedScreenSize;
+
         private IEnumerator Start()
         {
+            CacheScreenSize();
             SetupCamera();
             yield return LoadingSequence();
             yield return Gameplay();
@@ -61,6 +65,20 @@ namespace Assets.Scripts.AceOfShadows
         private void OnDestroy()
         {
             DisposeCards();
+        }
+
+        private void Update()
+        {
+            if (Screen.width != _cachedScreenSize.x || Screen.height != _cachedScreenSize.y)
+            {
+                CacheScreenSize();
+                SetupCamera();
+            }
+        }
+
+        private void CacheScreenSize()
+        {
+            _cachedScreenSize = new Vector2(Screen.width, Screen.height);
         }
 
         private IEnumerator LoadingSequence()
@@ -133,6 +151,12 @@ namespace Assets.Scripts.AceOfShadows
 
                 targetStack.PushCard(card);
             }
+
+            var pauseDuration = GetPauseAfterGameOverDuration();
+            if (pauseDuration > 0f)
+            {
+                yield return new WaitForSeconds(pauseDuration);
+            }
         }
 
         private IEnumerator ShowResults()
@@ -182,6 +206,16 @@ namespace Assets.Scripts.AceOfShadows
             }
 
             _allCards.Clear();
+        }
+
+        private float GetPauseAfterGameOverDuration()
+        {
+            if (_config == null)
+            {
+                return 0f;
+            }
+
+            return _config.PauseAfterGameOverDuration;
         }
 
         private float GetCardMoveTime()

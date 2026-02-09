@@ -6,6 +6,10 @@ using UnityEngine;
 
 namespace Assets.Scripts.MagicWords
 {
+    public class MagicWordsUIScreen : UIScreen<ConversationViewData>
+    {
+    }
+
     [Serializable]
     public class ConversationViewData : ViewData
     {
@@ -13,7 +17,20 @@ namespace Assets.Scripts.MagicWords
         private string _title;
 
         [CreateProperty]
-        public string Title { get => _title; set => _title = value; }
+        public string Title 
+        { 
+            get => _title; 
+            set
+            {
+                if (Equals(_title, value))
+                {
+                    return;
+                }
+
+                _title = value;
+                CommitChanges();
+            } 
+        }
 
         [SerializeField]
         private List<DialogueLineViewData> _dialogueLines;
@@ -36,7 +53,7 @@ namespace Assets.Scripts.MagicWords
 
         public Dictionary<string, AvatarViewData> Avatars;
 
-        public void FillData(ConversationDTO conversationDTO, IList<EmojiReplaceConfig> emojiReplaceConfigs)
+        public void FillData(ConversationDTO conversationDTO, IList<EmojiReplaceConfig> emojiReplaceConfigs, Texture2D defaultAvatarIcon)
         {
             if (conversationDTO == null)
             {
@@ -64,7 +81,8 @@ namespace Assets.Scripts.MagicWords
                         Name = avatarDTO.name,
                         Url = avatarDTO.url,
                         Position = avatarDTO.position == "left" ? AvatarPosition.Left : AvatarPosition.Right,
-                        Texture = default
+                        Texture = defaultAvatarIcon,
+                        IsTextureDirty = true
                     };
 
                     Avatars[avatarViewData.Name] = avatarViewData;
@@ -112,4 +130,5 @@ namespace Assets.Scripts.MagicWords
             Avatars?.Clear();
         }
     }
+
 }

@@ -12,12 +12,38 @@ namespace Assets.Scripts.App.UI
         private string _text;
 
         [CreateProperty]
-        public string Text { get => _text; set => _text = value; }
+        public string Text 
+        { 
+            get => _text; 
+            set
+            {
+                if (Equals(_text, value))
+                {
+                    return;
+                }
+
+                _text = value;
+                CommitChanges();
+            } 
+        }
 
         [SerializeField]
         private UnityEvent _onClick;
 
         [CreateProperty]
-        public UnityEvent OnClick { get => _onClick; set => _onClick = value; }
+        public UnityEvent OnClick 
+        { 
+            get => _onClick; 
+            set
+            {
+                if (Equals(_onClick, value))
+                {
+                    return;
+                }
+
+                _onClick = value;
+                CommitChanges();
+            } 
+        }
     }
 }

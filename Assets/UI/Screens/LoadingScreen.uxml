@@ -1,8 +1,8 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/General.uss?fileID=7433441132597879392&amp;guid=bb3a906a0df3d644c96e7808e7f56cfb&amp;type=3#General" />
-    <ui:VisualElement name="root" data-source-type="Assets.Scripts.App.UI.LoadingViewData, Assembly-CSharp" class="full-screen center-content splash-screen" style="flex-grow: 1;">
-        <ui:VisualElement name="content" class="background-light">
-            <ui:Label name="title" text="Title">
+    <ui:VisualElement name="root" data-source-type="Assets.Scripts.App.UI.LoadingViewData, Assembly-CSharp" class="full-screen center-content splash-screen">
+        <ui:VisualElement name="content" class="panel">
+            <ui:Label name="title" text="Title" class="title">
                 <Bindings>
                     <ui:DataBinding property="text" data-source-path="Title" binding-mode="ToTarget" />
                 </Bindings>
@@ -12,9 +12,9 @@
                     <ui:DataBinding property="text" data-source-path="Description" binding-mode="ToTarget" />
                 </Bindings>
             </ui:Label>
-            <ui:Label text="Label" name="progress">
+            <ui:Label name="progress" text="Progress">
                 <Bindings>
-                    <ui:DataBinding property="text" data-source-path="ProgressText" binding-mode="ToTarget" />
+                    <ui:DataBinding property="text" data-source-path="Progress" binding-mode="ToTarget" source-to-ui-converters="Percents" />
                 </Bindings>
             </ui:Label>
         </ui:VisualElement>

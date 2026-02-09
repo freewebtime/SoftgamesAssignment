@@ -51,8 +51,9 @@ MonoBehaviour:
   - {fileID: 6309538481190479780}
   - {fileID: 1102496722343675246}
   _allCards: []
-  _instantiateCardsImmediately: 1
+  _instantiateCardsImmediately: 0
   _config: {fileID: 11400000, guid: 1b8ecdace1e04b441a15f96fb127d354, type: 2}
+  _gameOverScreen: {fileID: 0}
 --- !u!1001 &1580008012825897670
 PrefabInstance:
   m_ObjectHideFlags: 0

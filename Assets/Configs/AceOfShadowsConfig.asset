@@ -166,7 +166,7 @@ MonoBehaviour:
   PixelsPerUnit: 100
   ViewportPadding: 0.5
   DistanceBetweenStacks: 6
-  CardMoveTime: 1
+  CardMoveTime: 0.2
   _colorStep: 0.11111111
   _minColorSaturation: 0.7
   _maxColorSaturation: 0.5

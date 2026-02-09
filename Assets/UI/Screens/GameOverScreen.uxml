@@ -1,8 +1,8 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/General.uss?fileID=7433441132597879392&amp;guid=bb3a906a0df3d644c96e7808e7f56cfb&amp;type=3#General" />
     <ui:VisualElement name="root" data-source-type="Assets.Scripts.AceOfShadows.GameOverViewData, Assembly-CSharp" class="full-screen center-content splash-screen">
-        <ui:VisualElement name="content" class="background-light">
-            <ui:Label name="title" text="Title">
+        <ui:VisualElement name="content" class="panel">
+            <ui:Label name="title" text="Title" class="title">
                 <Bindings>
                     <ui:DataBinding property="text" data-source-path="Title" binding-mode="ToTarget" />
                 </Bindings>
@@ -18,7 +18,7 @@
                         <ui:DataBinding property="text" data-source-path="Text" binding-mode="ToTarget" />
                     </Bindings>
                 </Assets.Scripts.App.UI.UIButton>
-                <Assets.Scripts.App.UI.UIButton name="button-quit" data-source-path="[1]" text="Button" onClick="OnClick">
+                <Assets.Scripts.App.UI.UIButton name="button-quit" data-source-path="[1]" text="Button" class="primary">
                     <Bindings>
                         <ui:DataBinding property="text" data-source-path="Text" binding-mode="ToTarget" />
                     </Bindings>

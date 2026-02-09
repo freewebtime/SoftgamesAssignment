@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ec1e4630e1a5c446b5021bc051b3542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.PhoenixFlame.PhoenixFlameController
-  _config: {fileID: 0}
+  _config: {fileID: 11400000, guid: f388ae4b19a0d174fb67a877301ae644, type: 2}
   _uiScreen: {fileID: 0}
   _flameParticles: {fileID: 0}

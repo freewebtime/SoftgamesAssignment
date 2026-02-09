@@ -24,10 +24,4 @@ namespace Assets.Scripts.PhoenixFlame
             _flameParticles.NextColor();
         }
     }
-
-    [CreateAssetMenu(fileName = "PhoenixFlameConfig", menuName = "Configs/PhoenixFlameConfig", order = 1)]
-    public class PhoenixFlameConfig : ScriptableObject
-    {
-
-    }
 }

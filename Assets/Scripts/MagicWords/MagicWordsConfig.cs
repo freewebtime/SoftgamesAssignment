@@ -13,6 +13,8 @@ namespace Assets.Scripts.MagicWords
 
         public float SlowInternetConnectionDelay;
 
+        public Texture2D DefaultAvatarIcon;
+
         public List<EmojiReplaceConfig> EmojiReplaceConfigs;
     }
 

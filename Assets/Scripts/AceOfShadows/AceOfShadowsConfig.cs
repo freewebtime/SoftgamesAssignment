@@ -25,6 +25,7 @@ namespace Assets.Scripts.AceOfShadows
         
         public float CardMoveTime = 1f;
         
+        public float PauseAfterGameOverDuration = 0f;
 
         [Header("Color Generation Settings")]
 

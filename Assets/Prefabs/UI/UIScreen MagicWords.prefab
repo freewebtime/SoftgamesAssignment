@@ -95,36 +95,4 @@ MonoBehaviour:
   UIDocument: {fileID: 3279806271852302699}
   _viewData:
     _title: Conversation
-    _dialogueLines:
-    - _avatar:
-        _name: Sheldon
-        _url: 
-        _position: 0
-        _texture: {fileID: -6527069497977903076, guid: 58a126cad2ef33246a4a99d9894c6349, type: 3}
-      _name: Sheldon
-      _text: Hello World! This is me!
-      _position: 1
-    - _avatar:
-        _name: Penny
-        _url: 
-        _position: 0
-        _texture: {fileID: 3506167780502562645, guid: 58a126cad2ef33246a4a99d9894c6349, type: 3}
-      _name: Penny
-      _text: No! It's me. And do with it what you want, but you can't deny it. Admit
-      _position: 0
-    - _avatar:
-        _name: Penny
-        _url: 
-        _position: 0
-        _texture: {fileID: 7433338533053954386, guid: 58a126cad2ef33246a4a99d9894c6349, type: 3}
-      _name: Leonard
-      _text: No way!
-      _position: 0
-    - _avatar:
-        _name: Sheldon
-        _url: 
-        _position: 0
-        _texture: {fileID: -6527069497977903076, guid: 58a126cad2ef33246a4a99d9894c6349, type: 3}
-      _name: Sheldon
-      _text: You are both ridiculous! I can't believe what I see
-      _position: 1
+    _dialogueLines: []

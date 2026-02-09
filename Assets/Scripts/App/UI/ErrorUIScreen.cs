@@ -1,6 +1,7 @@
 using System;
 using Unity.Properties;
 using UnityEngine;
+using UnityEngine.Rendering.RenderGraphModule;
 
 namespace Assets.Scripts.App.UI
 {
@@ -15,18 +16,57 @@ namespace Assets.Scripts.App.UI
         private string _title;
 
         [CreateProperty]
-        public string Title { get => _title; set => _title = value; }
+        public string Title 
+        { 
+            get => _title; 
+            set
+            {
+                if (Equals(_title, value))
+                {
+                    return;
+                }
+
+                _title = value;
+                CommitChanges();
+            } 
+        }
 
         [SerializeField]
         private string _message;
 
         [CreateProperty]
-        public string Message { get => _message; set => _message = value; }
+        public string Message 
+        { 
+            get => _message; 
+            set
+            {
+                if (Equals(_message, value))
+                {
+                    return;
+                }
+
+                _message = value;
+                CommitChanges();
+            } 
+        }
 
         [SerializeField]
         private UIButtonViewData _closeButton;
 
         [CreateProperty]
-        public UIButtonViewData CloseButton { get => _closeButton; set => _closeButton = value; }
+        public UIButtonViewData CloseButton 
+        { 
+            get => _closeButton; 
+            set
+            {
+                if (Equals(_closeButton, value))
+                {
+                    return;
+                }
+
+                _closeButton = value;
+                CommitChanges();
+            } 
+        }
     }
 }

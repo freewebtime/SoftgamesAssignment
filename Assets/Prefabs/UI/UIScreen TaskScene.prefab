@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: sourceAsset
       value: 
       objectReference: {fileID: 9197481963319205126, guid: cbd1c16c2b8cadf4e9bc9ed8124756dd, type: 3}
+    - target: {fileID: 9149346767745583779, guid: 123247b68c475a5478b549898eb26897, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -83,7 +87,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.App.UI.TaskSceneUIScreen
   UIDocument: {fileID: 6259624719013231834}
   _viewData:
-    _menuTitle: Task Menu
+    _title: Task Menu
     _toggleMenuButton:
       _text: Menu
       _onClick:

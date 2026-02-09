@@ -16,6 +16,19 @@ namespace Assets.Scripts.PhoenixFlame
         private UIButtonViewData _nextColorButton;
 
         [CreateProperty]
-        public UIButtonViewData NextColorButton { get => _nextColorButton; set => _nextColorButton = value; }
+        public UIButtonViewData NextColorButton 
+        { 
+            get => _nextColorButton; 
+            set
+            {
+                if (Equals(_nextColorButton, value))
+                {
+                    return;
+                }
+
+                _nextColorButton = value;
+                CommitChanges();
+            } 
+        }
     }
 }

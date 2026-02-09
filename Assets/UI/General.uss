@@ -1,4 +1,84 @@
+:root {
+    --bg-main: rgb(30, 30, 30);
+    --bg-panel: rgb(42, 42, 42);
+    --bg-button: rgb(36, 36, 36);
+    --bg-hover: rgb(48, 48, 48);
+/*     --bg-button: rgb(48, 48, 48);
+       --bg-hover: rgb(51, 51, 51);
+ */
+    /* --bg-button: rgb(48, 80, 120); */
+    /* --bg-hover: rgb(72, 120, 180); */
+    --accent: rgb(74, 163, 255);
+    --accent-hover: rgb(107, 183, 255);
+    --accent-dark: rgb(20, 100, 50);
+    --text-main: rgb(230, 230, 230);
+    --text-muted: rgb(170, 170, 170);
+    --border-radius: 6px;
+}
+
+.text-bubble {
+    background-color: var(--accent-dark);
+}
+
 VisualElement {
+    color: var(--text-main);
+    -unity-font-style: normal;
+}
+
+.panel {
+    background-color: var(--bg-panel);
+    padding: 12px;
+    border-radius: var(--border-radius);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-left-color: rgb(102, 102, 102);
+    border-right-color: rgb(102, 102, 102);
+    border-top-color: rgb(102, 102, 102);
+    border-bottom-color: rgb(102, 102, 102);
+}
+
+Label.title {
+    font-size: 24px;
+    -unity-font-style: bold;
+}
+
+Label.muted {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+UIButton {
+    background-color: var(--bg-button);
+    border-radius: var(--border-radius);
+    padding: 8px 14px;
+    color: var(--text-main);
+    -unity-font-style: bold;
+}
+
+UIButton:hover {
+    background-color: var(--bg-hover);
+}
+
+UIButton.primary {
+    background-color: var(--accent);
+    /* color: rgb(255, 255, 255); */
+    color: rgb(32, 32, 32);
+}
+
+UIButton.primary:hover {
+    background-color: var(--accent-hover);
+}
+
+UIButton:active {
+    top: 2px;
+    bottom: -2px;
+}
+
+.card-stack-counter {
+    font-size: 24px;
+    -unity-font-style: bold;
 }
 
 .full-screen {
@@ -34,7 +114,7 @@ VisualElement {
 }
 
 .splash-screen {
-    background-color: rgba(51, 51, 51, 0.7);
+    background-color: rgba(51, 51, 51, 0.9);
 }
 
 .background-dark {
@@ -83,4 +163,20 @@ VisualElement {
 
 .light-text {
     color: rgb(204, 204, 204);
+}
+
+.conversation-content {
+    width: 60%;
+    margin-top: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    margin-left: 10%;
+}
+
+.text-bubble {
+    font-size: 120%;
+}
+
+.unity-list-view__item:hover {
+    background-color: none;
 }

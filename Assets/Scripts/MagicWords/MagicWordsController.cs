@@ -7,7 +7,7 @@ namespace Assets.Scripts.MagicWords
 {
     public class MagicWordsController : MonoBehaviour
     {
-        public ConversationUIScreen ConversationScreen;
+        public MagicWordsUIScreen ConversationScreen;
         public ErrorUIScreen ErrorScreen;
         public LoadingUIScreen LoadingScreen;
 
@@ -50,6 +50,9 @@ namespace Assets.Scripts.MagicWords
                 yield return null;
             }
 
+            loadingViewData.Progress = 1;
+            yield return null;
+
             HideLoadingScreen();
 
             switch (webRequest.result)
@@ -83,7 +86,7 @@ namespace Assets.Scripts.MagicWords
                 viewData = ConversationScreen.ViewData ?? new ConversationViewData();
 
                 // show dialog
-                viewData.FillData(conversationDTO, _config.EmojiReplaceConfigs);
+                viewData.FillData(conversationDTO, _config.EmojiReplaceConfigs, _config.DefaultAvatarIcon);
             }
             catch (Exception ex)
             {
@@ -107,14 +110,13 @@ namespace Assets.Scripts.MagicWords
             
             foreach (var avatarEntry in viewData.Avatars)
             {
-                // uncomment this if you want to simulate slow internet connection
                 if (GetIsSimulateSlowInternetConnection())
                 {
                     yield return new WaitForSeconds(GetSlowInternetConnectionDelay());
                 }
 
                 var avatar = avatarEntry.Value;
-                if (avatar == null || string.IsNullOrEmpty(avatar.Url) || avatar.Texture != null)
+                if (avatar == null || string.IsNullOrEmpty(avatar.Url) || !avatar.IsTextureDirty)
                 {
                     continue;
                 }
@@ -129,11 +131,11 @@ namespace Assets.Scripts.MagicWords
                 {
                     var texture = ((UnityEngine.Networking.DownloadHandlerTexture)webRequest.downloadHandler).texture;
                     avatar.Texture = texture;
+                    avatar.IsTextureDirty = true;
                 }
                 else
                 {
                     Debug.LogError($"MagicWordsController: Error downloading avatar texture from {avatar.Url}. Error: {webRequest.error}");
-                    //ShowErrorScreen("Error", $"Failed to load avatar texture from url {avatar.Url}:\r\n{webRequest.error}");
                 }
             }
         }

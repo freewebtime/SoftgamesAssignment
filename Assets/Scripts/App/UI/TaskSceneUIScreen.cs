@@ -34,20 +34,20 @@ namespace Assets.Scripts.App.UI
     public class TaskSceneViewData : ViewData
     {
         [SerializeField]
-        private string _menuTitle = "Task Menu";
+        private string _title = "Task Menu";
 
         [CreateProperty]
-        public string MenuTitle
+        public string Title
         {
-            get => _menuTitle;
+            get => _title;
             set
             {
-                if (Equals(_menuTitle, value))
+                if (Equals(_title, value))
                 {
                     return;
                 }
 
-                _menuTitle = value;
+                _title = value;
                 CommitChanges();
             }
         }
@@ -56,13 +56,39 @@ namespace Assets.Scripts.App.UI
         private UIButtonViewData _toggleMenuButton;
 
         [CreateProperty]
-        public UIButtonViewData ToggleMenuButton { get => _toggleMenuButton; set => _toggleMenuButton = value; }
+        public UIButtonViewData ToggleMenuButton 
+        { 
+            get => _toggleMenuButton; 
+            set
+            {
+                if (Equals(_toggleMenuButton, value))
+                {
+                    return;
+                }
+
+                _toggleMenuButton = value;
+                CommitChanges();
+            } 
+        }
 
         [SerializeField]
         private List<UIButtonViewData> _menuButtons;
 
         [CreateProperty]
-        public List<UIButtonViewData> MenuButtons { get => _menuButtons; set => _menuButtons = value; }
+        public List<UIButtonViewData> MenuButtons 
+        { 
+            get => _menuButtons; 
+            set
+            {
+                if (Equals(_menuButtons, value))
+                {
+                    return;
+                }
+
+                _menuButtons = value;
+                CommitChanges();
+            } 
+        }
 
 
         [SerializeField]

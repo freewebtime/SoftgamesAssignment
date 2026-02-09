@@ -5,7 +5,7 @@
                 <ui:DataBinding property="style.backgroundImage" data-source-path="Avatar.Texture" binding-mode="ToTarget" />
             </Bindings>
         </ui:VisualElement>
-        <ui:VisualElement name="text-bubble-area" class="text-bubble background-dark" style="flex-grow: 1; border-bottom-left-radius: 0;">
+        <ui:VisualElement name="text-bubble-area" class="text-bubble" style="flex-grow: 1; border-bottom-left-radius: 0;">
             <ui:Label text="Text" name="dialogue-text-label" class="light-text" style="white-space: normal;">
                 <Bindings>
                     <ui:DataBinding property="text" data-source-path="Text" binding-mode="ToTarget" />

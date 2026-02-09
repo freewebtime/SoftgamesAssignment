@@ -13,16 +13,19 @@ MonoBehaviour:
   m_Name: MagicWordsConfig
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.MagicWords.MagicWordsConfig
   EndpointUrl: https://private-624120-softgamesassignment.apiary-mock.com/v3/magicwords
+  IsSimulateSlowInternetConnection: 1
+  SlowInternetConnectionDelay: 2
+  DefaultAvatarIcon: {fileID: 2800000, guid: 2af622cae945e784887ef8f4b6b46a0b, type: 3}
   EmojiReplaceConfigs:
   - Pattern: '{satisfied}'
-    Emoji: "\U0001F60A"
+    Emoji: "<size=\"24\">\U0001F60A</size>"
   - Pattern: '{intrigued}'
-    Emoji: "\U0001F914"
+    Emoji: "<size=\"24\">\U0001F914</size>"
   - Pattern: '{neutral}'
-    Emoji: "\U0001F610"
+    Emoji: "<size=\"24\">\U0001F610</size>"
   - Pattern: '{affirmative}'
-    Emoji: "\u2705"
+    Emoji: "<size=\"24\">\u2705</size>"
   - Pattern: '{laughing}'
-    Emoji: "\U0001F601"
+    Emoji: "<size=\"24\">\U0001F601</size>"
   - Pattern: '{win}'
-    Emoji: "\U0001F947"
+    Emoji: "<size=\"24\">\U0001F947</size>"

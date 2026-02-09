@@ -83,5 +83,7 @@ namespace Assets.Scripts.MagicWords
                 CommitChanges();
             } 
         }
+
+        public bool IsTextureDirty { get; set; }
     }
 }
