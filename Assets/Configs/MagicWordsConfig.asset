@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MagicWordsConfig
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.MagicWords.MagicWordsConfig
   EndpointUrl: https://private-624120-softgamesassignment.apiary-mock.com/v3/magicwords
-  IsSimulateSlowInternetConnection: 1
+  IsSimulateSlowInternetConnection: 0
   SlowInternetConnectionDelay: 2
   DefaultAvatarIcon: {fileID: 2800000, guid: 2af622cae945e784887ef8f4b6b46a0b, type: 3}
   EmojiReplaceConfigs:

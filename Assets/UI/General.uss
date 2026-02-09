@@ -3,11 +3,6 @@
     --bg-panel: rgb(42, 42, 42);
     --bg-button: rgb(36, 36, 36);
     --bg-hover: rgb(48, 48, 48);
-/*     --bg-button: rgb(48, 48, 48);
-       --bg-hover: rgb(51, 51, 51);
- */
-    /* --bg-button: rgb(48, 80, 120); */
-    /* --bg-hover: rgb(72, 120, 180); */
     --accent: rgb(74, 163, 255);
     --accent-hover: rgb(107, 183, 255);
     --accent-dark: rgb(20, 100, 50);
@@ -63,7 +58,6 @@ UIButton:hover {
 
 UIButton.primary {
     background-color: var(--accent);
-    /* color: rgb(255, 255, 255); */
     color: rgb(32, 32, 32);
 }
 
@@ -167,9 +161,9 @@ UIButton:active {
 
 .conversation-content {
     width: 60%;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-right: 10%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     margin-left: 10%;
 }
 
@@ -178,5 +172,50 @@ UIButton:active {
 }
 
 .unity-list-view__item:hover {
-    background-color: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.unity-scroller {
+    background-color: var(--bg-panel);
+    color: rgb(52, 52, 52);
+}
+
+.unity-scroller__low-button {
+    background-color: rgb(96, 96, 96);
+    border-width: 0;
+    -unity-background-image-tint-color: rgb(230, 230, 230);
+    border-top-right-radius: var(--border-radius);
+    border-top-left-radius: var(--border-radius);
+}
+
+.unity-scroller__high-button {
+    background-color: rgb(96, 96, 96);
+    border-width: 0;
+    border-bottom-right-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+    -unity-background-image-tint-color: rgb(230, 230, 230);
+}
+
+.unity-scroller__low-button:hover {
+    background-color: rgb(112, 112, 112);
+}
+
+.unity-scroller__high-button:hover {
+    background-color: rgb(112, 112, 112);
+}
+
+.unity-base-slider__tracker {
+    background-color: rgb(52, 52, 52);
+    border-width: 0;
+}
+
+.unity-base-slider__dragger {
+    border-width: 0px;
+    border-color: rgb(72, 72, 72);
+    background-color: rgb(72, 72, 72);
+    border-radius: 3px;
+}
+
+.unity-base-slider__dragger:hover {
+    background-color: rgb(112, 112, 112);
 }
