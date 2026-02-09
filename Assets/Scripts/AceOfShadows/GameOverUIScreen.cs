@@ -16,7 +16,7 @@ namespace Assets.Scripts.AceOfShadows
 
         public void ReturnToMainMenu()
         {
-            SceneLoader.Load(SceneId.MainMenu);
+            SceneLoader.Load(SceneId.Lobby);
         }
     }
 

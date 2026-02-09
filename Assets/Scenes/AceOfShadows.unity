@@ -562,6 +562,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 143508525110836213, guid: c8a2e7b3ee6006f4592d4d5e9f381b73, type: 3}
+      propertyPath: _cameraController
+      value: 
+      objectReference: {fileID: 273005992}
+    - target: {fileID: 143508525110836213, guid: c8a2e7b3ee6006f4592d4d5e9f381b73, type: 3}
       propertyPath: _pixelPerfectCamera
       value: 
       objectReference: {fileID: 273005992}
@@ -627,7 +631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2956899422930408022, guid: c8a2e7b3ee6006f4592d4d5e9f381b73, type: 3}
       propertyPath: m_Name
-      value: Deck Controller
+      value: AceOfShadows Controller
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

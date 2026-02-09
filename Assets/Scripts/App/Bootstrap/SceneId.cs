@@ -4,7 +4,7 @@ namespace Assets.Scripts.App.Bootstrap
 {
     public enum SceneId
     {
-        MainMenu,
+        Lobby,
         AceOfShadows,
         MagicWords,
         PhoenixFlame

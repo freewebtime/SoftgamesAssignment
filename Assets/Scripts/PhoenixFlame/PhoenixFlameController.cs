@@ -5,12 +5,6 @@ namespace Assets.Scripts.PhoenixFlame
     public class PhoenixFlameController : MonoBehaviour
     {
         [SerializeField]
-        private PhoenixFlameConfig _config;
-
-        [SerializeField]
-        private PhoenixFlameUIScreen _uiScreen;
-
-        [SerializeField]
         private PhoenixFlameParticles _flameParticles;
 
         public void NextColor()

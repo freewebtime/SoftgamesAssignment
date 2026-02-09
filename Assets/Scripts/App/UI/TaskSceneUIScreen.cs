@@ -21,7 +21,7 @@ namespace Assets.Scripts.App.UI
 
         public void ReturnToMainMenu()
         {
-            SceneLoader.Load(SceneId.MainMenu);
+            SceneLoader.Load(SceneId.Lobby);
         }
 
         public void RestartScene()

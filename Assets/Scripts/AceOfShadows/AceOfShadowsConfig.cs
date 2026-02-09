@@ -27,23 +27,6 @@ namespace Assets.Scripts.AceOfShadows
         
         public float PauseAfterGameOverDuration = 0f;
 
-        [Header("Color Generation Settings")]
-
-        [SerializeField]
-        private float _colorStep = 1f / 11f;
-
-        [SerializeField]
-        private float _minColorSaturation = 1f;
-
-        [SerializeField]
-        private float _maxColorSaturation = 0.5f;
-
-        [SerializeField]
-        private float _minColorValue = 1f;
-
-        [SerializeField]
-        private float _maxColorValue = 0.5f;
-
         public Rect CalcGameplayArea()
         {
             var size = new Vector2
@@ -78,26 +61,6 @@ namespace Assets.Scripts.AceOfShadows
             }
 
             return null;
-        }
-
-        [ContextMenu("Fill Sprite Colors")]
-        private void FillSpriteColors()
-        {
-            SpriteColors ??= new List<Color>();
-            SpriteColors.Clear();
-
-            var circleCount = Mathf.CeilToInt(CardsCount / _colorStep);
-            var circleStep = 1f / circleCount;
-
-            for (int cardIndex = 0; cardIndex < CardsCount; cardIndex++)
-            {
-                var hue = (cardIndex * _colorStep) % 1f;
-                var circleIndex = cardIndex / _colorStep;
-                var saturation = Mathf.Lerp(_minColorSaturation, _maxColorSaturation, circleIndex * circleStep);
-                var colorValue = Mathf.Lerp(_minColorValue, _maxColorValue, circleIndex * circleStep);
-
-                SpriteColors.Add(Color.HSVToRGB(hue, saturation, colorValue));
-            }
         }
     }
 }

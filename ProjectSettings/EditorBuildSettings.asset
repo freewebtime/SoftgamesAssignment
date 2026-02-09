@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Boot.unity
+    path: Assets/Scenes/Main.unity
     guid: 2ba8a4046fe5d0241b59d81083b38f31
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/Lobby.unity
     guid: d51b27ce4aeac9643b28025ef32a5a94
   - enabled: 1
     path: Assets/Scenes/AceOfShadows.unity

@@ -20,7 +20,7 @@ namespace Assets.Scripts.App.Bootstrap
 
         protected void Start()
         {
-            SceneLoader.Load(SceneId.MainMenu);
+            SceneLoader.Load(SceneId.Lobby);
         }
     }
 }

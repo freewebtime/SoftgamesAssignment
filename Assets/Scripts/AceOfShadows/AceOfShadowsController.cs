@@ -3,10 +3,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Assets.Scripts.AceOfShadows
 {
-    public class DeckController : MonoBehaviour
+    public class AceOfShadowsController : MonoBehaviour
     {
         private CardViewPool _cardViewPool;
         public CardViewPool CardViewPool
@@ -21,8 +22,9 @@ namespace Assets.Scripts.AceOfShadows
             }
         }
 
+        [FormerlySerializedAs("_pixelPerfectCamera")]
         [SerializeField]
-        private PixelPerfectCamera _pixelPerfectCamera;
+        private CameraController _cameraController;
 
         [SerializeField]
         private List<CardStack> _cardStacks;
@@ -52,14 +54,14 @@ namespace Assets.Scripts.AceOfShadows
 
         private void SetupCamera()
         {
-            if (_pixelPerfectCamera == null)
+            if (_cameraController == null)
             {
                 Debug.LogError("PixelPerfectCamera reference is missing. Please assign it in the inspector.");
                 return;
             }
 
             var gameplayArea = CalcGameplayArea();
-            _pixelPerfectCamera.FitRect(gameplayArea, GetViewportPadding());
+            _cameraController.FitRect(gameplayArea, GetViewportPadding());
         }
 
         private void OnDestroy()

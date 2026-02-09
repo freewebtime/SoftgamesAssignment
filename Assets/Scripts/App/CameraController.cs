@@ -2,7 +2,7 @@
 
 namespace Assets.Scripts.App
 {
-    public class PixelPerfectCamera : MonoBehaviour
+    public class CameraController : MonoBehaviour
     {
         public Camera Camera;
 
